@@ -163,22 +163,40 @@
 					<section id="grid">
 						<article>
 							<h2>Grid</h2>
-							<p>The grid is based on percents - <code>small-50</code> or <code>large-50</code> is 50% of the screen width. The two breakpoints are defined by <code>small</code> or <code>large</code> classes. Resize the screen to see the different breakpoints.</p>
-							<pre><code class="language-html">&lt;div class=&quot;row&quot;&gt;
-  &lt;div class=&quot;small-50&quot;&gt;50%&lt;/div&gt;
-  &lt;div class=&quot;small-50&quot;&gt;50%&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;row&quot;&gt;
-  &lt;div class=&quot;large-50&quot;&gt;50%&lt;/div&gt;
-  &lt;div class=&quot;large-50&quot;&gt;50%&lt;/div&gt;
-&lt;/div&gt;</code></pre>
+							<p>The grid is based on percents - <code>x-small-50</code>, <code>small-50</code>, <code>medium-50</code> or <code>large-50</code> is 50% of the screen width. The four breakpoints are defined by <code>x-small</code>, <code>small</code>, <code>medium</code> or <code>large</code> classes. Resize the screen to see the different breakpoints.</p>
+							<pre><code class="language-html">
+								<div class="row">
+  <div class="x-small-50">50%</div>
+  <div class="x-small-50">50%</div>
+</div>
+								<div class="row">
+  <div class="small-50">50%</div>
+  <div class="small-50">50%</div>
+</div>
+								<div class="row">
+  <div class="medium-50">50%</div>
+  <div class="medium-50">50%</div>
+</div>
+<div class="row">
+  <div class="large-50">50%</div>
+  <div class="large-50">50%</div>
+</div>
+</code></pre>
 							<div class="row">
-								<div class="small-50 example">50</div>
-								<div class="small-50 example">50</div>
+								<div class="x-small-50">50%</div>
+								<div class="x-small-50">50%</div>
 							</div>
 							<div class="row">
-								<div class="large-50 example">50</div>
-								<div class="large-50 example">50</div>
+								<div class="small-50">50%</div>
+								<div class="small-50">50%</div>
+							</div>
+							<div class="row">
+								<div class="medium-50">50%</div>
+								<div class="medium-50">50%</div>
+							</div>
+							<div class="row">
+								<div class="large-50">50%</div>
+								<div class="large-50">50%</div>
 							</div>
 						</article>
 						<article>
@@ -255,17 +273,33 @@
 							</div>
 							<h3>Flex Breakpoints</h3>
 							<p>The same breakpoints are available for the flex grid.</p>
-							<pre><code class="language-html">&lt;div class=&quot;flex-row&quot;&gt;
-	&lt;div class=&quot;flex-small&quot;&gt;&lt;/div&gt;
-	&lt;div class=&quot;flex-small&quot;&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;flex-row&quot;&gt;
-	&lt;div class=&quot;flex-large&quot;&gt;&lt;/div&gt;
-	&lt;div class=&quot;flex-large&quot;&gt;&lt;/div&gt;
-&lt;/div&gt;</code></pre>
+							<pre><code class="language-html"><div class="flex-row">
+								<div class="flex-x-small">2</div>
+								<div class="flex-x-small">2</div>
+							</div>
+							<div class="flex-row">
+								<div class="flex-small">2</div>
+								<div class="flex-small">2</div>
+							</div>
+							<div class="flex-row">
+								<div class="flex-medium">2</div>
+								<div class="flex-medium">2</div>
+							</div>
+							<div class="flex-row">
+								<div class="flex-large">2</div>
+								<div class="flex-large">2</div>
+							</div></code></pre>
+							<<div class="flex-row">
+							<div class="flex-x-small example">2</div>
+							<div class="flex-x-small example">2</div>
+						</div>
 							<div class="flex-row">
 								<div class="flex-small example">2</div>
 								<div class="flex-small example">2</div>
+							</div>
+							<div class="flex-row">
+								<div class="flex-medium example">2</div>
+								<div class="flex-medium example">2</div>
 							</div>
 							<div class="flex-row">
 								<div class="flex-large example">2</div>
@@ -701,12 +735,13 @@
 						<article>
 							<h2>Code</h2>
 							<p>Style has been added for inline <code>&lt;code&gt;</code> tags, and <code>&lt;kbd&gt;</code> is a <kbd>keyboard input</kbd>. </p>
-							<o>Place blocks of preformatted code in a <code>&lt;pre&gt;&lt;code&gt;</code>.</p>
+							<o>Place blocks of preformatted code in a <code>&lt;pre&gt;&lt;code&gt;</code>.
 								<pre><code>class Voila {
 public:
   // Voila
   static const string VOILA = "Voila";
 }</code></pre>
+							</o>
 						</article>
 
 					</section>
@@ -838,7 +873,7 @@ public:
 							<p>This project is built with Sass (SCSS) and Gulp. If you're not familiar with these technologies, please read the tutorials below.</p>
 							<ul>
 								<li><a href="https://www.taniarascia.com/learn-sass-now/" target="_blank">Learn to use Sass</a></li>
-								<li><a href="https://www.taniarascia.com/getting-started-with-gulp/" targer="_blank">Learn to use Gulp</a></li>
+								<li><a href="https://www.taniarascia.com/getting-started-with-gulp/" target="_blank">Learn to use Gulp</a></li>
 							</ul>
 							<p>Sass is used to extend your CSS, allowing you to use useful concepts like variables and nesting, as well as compartmentalizing and organizing the code. Gulp is used to watch for changes and process those Sass files into regular CSS files, as well as minifying and adding prefixes for cross-browser compatibilty.</p>
 							<p>If you already have Node installed, you can just clone the project...</p>
@@ -847,7 +882,7 @@ public:
 							<pre><code>npm install</code></pre>
 							<p>and run.</p>
 							<pre><code>gulp</code></pre>
-							<p>The default <code>gulp</code> command will run a watch to compile, minify and prefix your files. If that doesn't make sense, read the <a href="https://www.taniarascia.com/getting-started-with-gulp/" targer="_blank">aformentioned article</a> and you'll be up to speed in no time.</p>
+							<p>The default <code>gulp</code> command will run a watch to compile, minify and prefix your files. If that doesn't make sense, read the <a href="https://www.taniarascia.com/getting-started-with-gulp/" target="_blank">aformentioned article</a> and you'll be up to speed in no time.</p>
 						</article>
 
 						<article>
