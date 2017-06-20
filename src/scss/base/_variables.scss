@@ -13,8 +13,16 @@ $large: 1200px;
 
 /* Breakpoints */
 
+/*
 $mobile: $x-small;
 $desktop: $medium;
+*/
+
+/* CB: ridefinisco i breakpoint */
+$x-small-bp: $x-small;
+$small-bp: $small;
+$medium-bp: $medium;
+$large-bp: $large;
 
 /* Colors */
 
@@ -39,14 +47,21 @@ $font-style: normal;
 $font-variant: normal;
 $font-weight: normal;
 $font-color: #404040;
-$font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Arial, sans-serif;
+//$font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Arial, sans-serif;
+$font-family: Verdana, Geneva, sans-serif;
 $line-height: 1.6;
 
 // Headings
-$heading-font-color: #404040;
+//$heading-font-color: #404040;
+$heading-font-color: #028EB2;
+//CB: introduco la variabile $heading-secondary-font-color
+$heading-secondary-font-color: #333333;
 $heading-font-weight: 600;
-$heading-font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Arial, sans-serif;
+//$heading-font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Arial, sans-serif;
+$heading-font-family: 'Yanone Kaffeesatz','Trebuchet MS', Helvetica, sans-serif;
 $heading-line-height: 1.2;
+//CB: introduco la variabile $heading-text-transform
+$heading-text-transform: uppercase;
 
 // Mobile heading font size
 $h1-mobile: 1.75rem;
@@ -83,7 +98,8 @@ $button-background: $primary-color;
 $button-background-hover: darken($button-background, 10%);
 $button-color: #ffffff;
 $button-font-weight: 600;
-$button-font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Arial, sans-serif;
+//$button-font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Arial, sans-serif;
+$font-family: Verdana, Geneva, sans-serif;
 $button-font-size: 1rem;
 $button-border-width: 1px;
 $button-border-style: solid;

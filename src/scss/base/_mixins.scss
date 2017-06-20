@@ -1,16 +1,30 @@
 /* Mixins
   =============== */
+//CB: introduco due nuove media query
 
-// Media query for mobile first layout 
-@mixin small-breakpoint {
-	@media (min-width: #{$mobile}) {
+//CB: Break at x-small-bp
+@mixin x-small-breakpoint {
+	@media (min-width: #{$x-small-bp}) {
 		@content;
 	}
 }
 
-// Break on desktop
+// Media query for mobile first layout 
+@mixin small-breakpoint {
+	@media (min-width: #{$small-bp}) {
+		@content;
+	}
+}
+
+//CB:Break at medium-bp
+@mixin medium-breakpoint {
+	@media (min-width: #{$medium-bp}) {
+		@content;
+	}
+}
+//Break on desktop
 @mixin large-breakpoint {
-	@media (min-width: #{$desktop}) {
+	@media (min-width: #{$large-bp}) {
 		@content;
 	}
 }
