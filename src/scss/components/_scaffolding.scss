@@ -208,6 +208,12 @@ dd {
 	margin-right: auto;
 }
 
+//CB: X-Small container
+.x-small-container {
+	@extend .container;
+	max-width: $x-small;
+}
+
 // Small container
 .small-container {
 	@extend .container;
