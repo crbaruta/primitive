@@ -125,3 +125,14 @@
 	width: 1px;
 	overflow: hidden;
 }
+
+
+/* ========================================================================== */
+// CB: hide text for image replacement
+// https://www.appnovation.com/blog/modern-approach-css-image-replacement
+/* ========================================================================== */
+.hide-text {
+	text-indent: 100%; /* Sposta il testo fuori dall'elemento */
+	white-space: nowrap; /* Impedisce al testo di andare a capo */
+	overflow: hidden; /* Il testo eccedente viene tagliato */
+}
