@@ -52,7 +52,11 @@ $margin-bottom: 1rem;
   flex: 1;
 }
 
+
+// CB: aggiungo classi .flex-x-small e .flex-medium
+.flex-x-small,
 .flex-small,
+.flex-medium,
 .flex-large {
   @extend %column-padding;
   flex-basis: 100%;
@@ -63,8 +67,12 @@ $margin-bottom: 1rem;
 /* Mobile view */
 
 // On mobile, all columns are full width with a bottom margin
+// CB: aggiungo classi .x-small-# e .medium-#
 @each $entry in $grid {
+
+  .x-small-#{floor($entry)},
   .small-#{floor($entry)},
+  .medium-#{floor($entry)},
   .large-#{floor($entry)} {
     @extend %full-width-column;
     @extend %column-padding;
@@ -74,7 +82,24 @@ $margin-bottom: 1rem;
     float: left;
     @extend %column-padding;
   }
-} 
+}
+
+/* CB: aggiungo X-Small screen breakpoint */
+
+@include x-small-breakpoint {
+  // Float all columns to the left for x-small screens
+  @each $entry in $grid {
+    .x-small-#{floor($entry)} {
+      width: percentage($entry) * 0.01;
+      float: left;
+      margin-bottom: 0;
+    }
+  }
+  .flex-x-small {
+    flex: 1;
+    margin-bottom: 0;
+  }
+}
 
 
 /* Small screen breakpoint */
@@ -92,6 +117,23 @@ $margin-bottom: 1rem;
 		flex: 1;
 		margin-bottom: 0;
 	}
+}
+
+/* CB: aggiungo Medium screen breakpoint */
+
+@include medium-breakpoint {
+  // Float all columns to the left for medium screens
+  @each $entry in $grid {
+    .medium-#{floor($entry)} {
+      width: percentage($entry) * 0.01;
+      float: left;
+      margin-bottom: 0;
+    }
+  }
+  .flex-medium {
+    flex: 1;
+    margin-bottom: 0;
+  }
 }
 
 

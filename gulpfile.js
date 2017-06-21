@@ -25,8 +25,10 @@ gulp.task('workflow', function () {
             }
         }))
         .pipe(gulp.dest('./dist/css/'))
-        //.pipe(gulp.dest('./docs/css/')) // comment out for production
+        .pipe(gulp.dest('./docs/css/'))
 });
+
+// comment out the statement .pipe(gulp.dest('./docs/css/')) for production
 
 //Watch task
 gulp.task('default', function () {
