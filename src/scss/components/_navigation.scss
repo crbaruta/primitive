@@ -1,2 +1,244 @@
-/* Navigation
-  =============== */
+$container: 1200px;
+$breakpoint: 1024px;
+$nav-height: 70px;
+$nav-background: #3C3C3C;
+$nav-font-color: #ffffff;
+$link-hover-color: #2581DC;
+
+//// Navigation font
+$nav-font-size: 1.5rem;
+$nav-font-color: #ffffff;
+$nav-font-weight: 200;
+$nav-font-family: 'Yanone Kaffeesatz','Trebuchet MS', Helvetica, sans-serif;
+$nav-line-height: 1.2;
+$nav-text-transform: uppercase;
+
+// Navigation Link styling
+.navigation a {
+  color: $nav-font-color;
+  text-decoration: none;
+  &:hover,
+  &:active,
+  &:focus {
+    text-decoration: none;
+  }
+}
+
+.wrapper {
+  background-color: #fff;
+}
+.container {
+  max-width: $container;
+  margin: 0 auto;
+}
+
+.navigation {
+  height: $nav-height;
+  background: $nav-background;
+  position: relative;
+}
+
+nav {
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li {
+      float: left;
+      position: relative;
+      border-right: 1px solid #ccc;
+      background: $nav-background;
+      text-align:left;
+      a {
+        display: block;
+        padding: 0 20px;
+        line-height: $nav-height;
+        background: $nav-background;
+        font-size:$nav-font-size;
+        font-family: $nav-font-family;
+        /*color: $nav-font-color;*/
+        text-decoration: none;
+        text-transform: $nav-text-transform;
+        &:hover {
+          background: $link-hover-color;
+        }
+        &:not(:only-child):after {
+          padding-left: 4px;
+          content: ' ▾';
+        }
+      }
+      ul li {
+        min-width: 300px;
+        border-top: 1px solid #ccc;
+        text-align:left;
+        & a {
+          padding: 15px;
+          line-height: 20px;
+          z-index: 1;
+          text-transform:lowercase;
+        }
+        & a::first-letter{
+          text-transform:uppercase;
+        }
+        ul li {
+          text-align:left;
+          & a {
+            padding-left: 10px;
+            margin-left: 15px;
+            &:hover {
+              background: $nav-background;
+              color: $nav-font-color;
+              text-decoration: none;
+            }
+          }
+        }
+        ul li:hover{
+          //bordo colorato che evidenzia voce di terzo livello
+          background-color: $link-hover-color;
+        }
+      }
+      li.cur{
+        a{
+          background-color: $link-hover-color;
+        }
+        li a {
+          background-color:$nav-background;
+        }
+      }
+    }
+  }
+}
+
+
+.nav-dropdown {
+  position: absolute;
+  display: none;
+  z-index: 1;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+  .nav-dropdown{
+    position:relative;
+  }
+}
+
+
+.nav-mobile {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: $nav-background;
+  height: $nav-height;
+  width: $nav-height;
+}
+
+#nav-toggle {
+  position: absolute;
+  left: 18px;
+  top: 22px;
+  cursor: pointer;
+  padding: 10px 35px 16px 0;
+  span,
+  span:before,
+  span:after {
+    cursor: pointer;
+    border-radius: 1px;
+    height: 3px;
+    width: 35px;
+    background: $nav-font-color;
+    position: absolute;
+    display: block;
+    content: '';
+    transition: all 300ms ease-in-out;
+  }
+  span:before {
+    top: -10px;
+  }
+  span:after {
+    bottom: -10px;
+  }
+  &.active span {
+    background-color: transparent;
+    &:before,
+    &:after {
+      top: 0;
+    }
+    &:before {
+      transform: rotate(45deg);
+    }
+    &:after {
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+@media only screen and (max-width: $breakpoint) {
+   #header{
+     margin:0;
+     padding:0;
+   }
+  .navigation {
+    background:yellow;
+  }
+
+  .nav-mobile {
+    display: block;
+    background:$nav-background;
+  }
+  nav {
+    width: 100%;
+    padding: $nav-height 0 15px;
+    ul {
+      display: none;
+      li {
+        float: none;
+        a {
+          padding: 15px;
+          line-height: 20px;
+        }
+        ul li a {
+          padding-left: 30px;
+        }
+      }
+    }
+  }
+
+  .nav-dropdown {
+    position: static;
+  }
+}
+
+@media screen and (min-width: $breakpoint) {
+  .navigation {
+    height:40px;
+  }
+
+  .nav-list {
+    display: block !important;
+  }
+
+  nav {
+    width: 100%;
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+  }
+
+  nav ul li {
+    list-style: none;
+    flex-grow: 1;
+    text-align: center;
+  }
+
+  nav ul li a {
+    display: block;
+    line-height: 40px;
+  }
+
+
+}
+
+
