@@ -3,12 +3,16 @@
 
 /* Loghi header
   =========================== */
+
+#header-container{
+  height:30px;
+}
 #logo-poli {
   width: 269px;
   height: 20px;
   background: url(../images/logo-poli.svg);
   float: left;
-  margin:0;
+  margin:5px 0;
 }
 
 #logo-meccanica {
@@ -16,5 +20,113 @@
   height: 20px;
   background: url(../images/logo-meccanica.svg);
   float: left;
-  margin:0;
+  margin:5px 0;
 }
+
+
+/* News
+ ================================*/
+/* News list date ***********/
+.news-list-date {
+  background: url(../images/calendario.png) no-repeat;
+  width: 43px;
+  height: 44px;
+  text-align: center;
+  display: inline-block;
+  padding-top: 8px;
+  top: 0;
+}
+
+.news-list-date a {
+  color: #fff;
+  font-size: 11px;
+}
+
+/* News tabs **************/
+
+.tabs {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  margin: 1em 0 2em;
+  font-weight: 300;
+}
+
+/* Tab Nav */
+
+.tabs nav {
+  text-align: center;
+  font-family: $heading-font-family
+}
+
+.tabs nav ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: inline-block;
+}
+
+.tabs nav ul li {
+  border: 1px solid #becbd2;
+  border-bottom: none;
+  margin: 0 0.25em;
+  display: block;
+  float: left;
+  position: relative;
+}
+
+.tabs nav li.active {
+  border: 1px solid $heading-font-color;
+  border-top: 2px solid $heading-font-color;
+  border-bottom: none;
+  z-index: 100;
+}
+
+.tabs nav li.active:before,
+.tabs nav li.active:after {
+  content: '';
+  position: absolute;
+  height: 1px;
+  right: 100%;
+  bottom: 0;
+  width: 1000px;
+  background: $heading-font-color;
+}
+
+.tabs nav li.active:after {
+  right: auto;
+  left: 100%;
+  width: 4000px;
+}
+
+.tabs nav a {
+  color: #becbd2;
+  display: block;
+  font-size: 1.45em;
+  line-height: 2.5;
+  padding: 0 1.25em;
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+.tabs nav a:hover {
+  color: #768e9d;
+  text-decoration: none;
+}
+
+.tabs nav li.active a {
+  color: $heading-font-color;
+  text-decoration: none;
+}
+
+
+/* News Tab content */
+.tab-content {
+  background: linear-gradient(to bottom right, white, #F8F8F8);
+  display: none;
+  padding: 1.5rem;
+}
+.show {
+  display: block;
+}
+

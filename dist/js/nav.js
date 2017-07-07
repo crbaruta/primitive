@@ -2,22 +2,14 @@
     $(function() { // DOM ready
         // If a link has a dropdown, add sub menu toggle.
         $('nav ul li a:not(:only-child)').click(function(e) {
+            e.preventDefault();
             $(this).siblings('.nav-dropdown').toggle();
             // Close one dropdown when selecting another
             $('.nav-dropdown').not($(this).siblings()).hide();
-            //dovrebe mantenere aperti i genitori degli elementi con classe .cur
-            $('.nav-dropdown .cur').parents($(this)).show();
+            //dovrebe mantenere aperti i genitori degli elementi con classe .act
+            //$('.nav-dropdown .act').parents($(this)).show();
             e.stopPropagation();
         });
-        /* // If a link has a dropdown, add sub menu toggle.
-         $('ul.nav-dropdown li a:not(:only-child)').click(function(e) {
-         $(this).siblings('.nav-dropdown-2').toggle();
-         // Close one dropdown when selecting another
-         $('.nav-dropdown-2').not($(this).siblings()).hide();
-         $('.nav-dropdown-2').parents().show();
-         e.stopPropagation();
-         });*/
-
         // Clicking away from dropdown will remove the dropdown class
         $('html').click(function() {
             $('.nav-dropdown').hide();
