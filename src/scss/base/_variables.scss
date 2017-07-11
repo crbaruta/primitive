@@ -41,8 +41,9 @@ $bq-border: 16px solid #f0f0f0;
 /* Typography */
 
 // Body font
+//$font-size è la dimensione applicata al selettore html
 $font-size: 1rem;
-$body-font-size: 1rem;
+$body-font-size: 0.875rem;
 $font-style: normal;
 $font-variant: normal;
 $font-weight: normal;
@@ -64,8 +65,8 @@ $heading-line-height: 1.2;
 $heading-text-transform: uppercase;
 
 // Mobile heading font size
-$h1-mobile: 1.75rem;
-$h2-mobile: 1.5rem;
+$h1-mobile: 1.5rem;/*1.75*/
+$h2-mobile: 1.375rem;/*1.5*/
 $h3-mobile: 1.25rem;
 $h4-mobile: 1.1rem;
 $h5-mobile: 1rem;

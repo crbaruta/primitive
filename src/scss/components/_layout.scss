@@ -26,6 +26,14 @@
 
 /* News
  ================================*/
+/* tt_news style overriding ************/
+
+.news-list-container h3 {
+  margin: 0 0 5px 0;
+}
+
+
+
 /* News list date ***********/
 .news-list-date {
   background: url(../images/calendario.png) no-repeat;
