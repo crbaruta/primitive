@@ -12,6 +12,7 @@ $column-padding: 1rem;
 $margin-bottom: 1rem;
 
 // The rows have a negative margin  which are offset by the padding on the columns.
+
 %column-padding {
   padding-left: $column-padding;
   padding-right: $column-padding;
@@ -21,6 +22,7 @@ $margin-bottom: 1rem;
   margin-left: -$column-padding;
   margin-right: -$column-padding;
 }
+
 
 // Mobile column view
 %full-width-column {
@@ -48,7 +50,7 @@ $margin-bottom: 1rem;
 }
 
 .flex-column {
-  @extend %column-padding;
+ @extend %column-padding;
   flex: 1;
 }
 

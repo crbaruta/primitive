@@ -1,9 +1,10 @@
 $container: 1200px;
 $breakpoint: 1024px;
 $nav-height: 70px;
-$nav-background: #3C3C3C;
+$nav-background: #333333;
 $nav-font-color: #ffffff;
-$link-hover-color: #2581DC;
+/*$link-hover-color: #2581DC;*/
+$link-hover-color: #028EB2;
 
 //// Navigation font
 $nav-font-size: 1.375rem;
@@ -71,7 +72,7 @@ nav.main {
         }
         &:not(:only-child):after {
           padding-left: 4px;
-          content: ' ▾';
+          content: ' ▾';/*U+25BE blacktriangledown*/
         }
       }
       ul li {

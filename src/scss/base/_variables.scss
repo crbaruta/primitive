@@ -27,13 +27,14 @@ $large-bp: $large;
 /* Colors */
 
 $background: white; 
-$primary-color: #0366EE;
+$primary-color: #028EB2;
 $secondary-color: #5FBA7D; 
 $accent-color: #cdcdcd;
 $alternate-background: #fafafa;
 $alternate-color: #404040;
-$link-color: $primary-color;
-$link-hover-color: darken($link-color, 15%);
+$link-color: $alternate-color;
+/*$link-hover-color: darken($link-color, 15%);*/
+$link-hover-color: $primary-color;
 $highlight: #ffeea8;
 $error: #D33C40;
 $bq-border: 16px solid #f0f0f0;
@@ -47,7 +48,7 @@ $body-font-size: 0.875rem;
 $font-style: normal;
 $font-variant: normal;
 $font-weight: normal;
-$font-color: #404040;
+$font-color: #000000;
 //$font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Arial, sans-serif;
 $font-family: Verdana, Geneva, sans-serif;
 $line-height: 1.6;
@@ -73,7 +74,7 @@ $h5-mobile: 1rem;
 
 // Heading font size
 $h1: 1.5rem;
-$h2: 1.375 rem;
+$h2: 1.375rem;
 $h3: 1.25rem;
 $h4: 1.1rem;
 $h5: 1rem;
