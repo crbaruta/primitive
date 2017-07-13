@@ -187,6 +187,10 @@ input:checked + label {
 
 /* Links menu home page
  ========================================================================*/
+.link{
+  margin: 1.5rem 0;
+}
+
 .csc-menu-10 {
   padding:0;
   margin:0;
@@ -198,6 +202,7 @@ input:checked + label {
   font-family: $heading-font-family;
   font-size:1.375rem;
   text-transform: uppercase;
+  padding: .15rem;
   border-top: 1px solid transparent;
   border-bottom: 1px dotted #bbb;
   &:after {
@@ -251,6 +256,29 @@ input:checked + label {
   }
 }
 
+
+@include medium-breakpoint {
+
+  .csc-menu-10 li:after {
+      content: '';
+  }
+  .csc-menu-10 span.img{
+    flex-basis:100%;
+    order: 2;
+  }
+  .csc-menu-10 a.text{
+    flex-basis:100%;
+    order: 1;
+    margin:0;
+    background: $footer-background;
+    color: #ffffff;
+  }
+
+  .csc-menu-10 li:nth-child(n) {
+    border: none;
+  }
+
+}
 
 
 /* Footer
@@ -310,7 +338,7 @@ input:checked + label {
 
 #footer-text {
   padding: 15px 0 0 15px;
-  background-color: #3F4C50;
+  background-color: $footer-background;
   border-bottom: 10px solid #333;
   color:#fff;
 }
@@ -325,7 +353,7 @@ input:checked + label {
   }
 }
 
-/* Footer block order **************/
+/* Footer desktop layout **************/
 @include medium-breakpoint {
   /*dal medium-breakpoint in poi cambio l'ordine dei div del footer*/
   #footer-container{
