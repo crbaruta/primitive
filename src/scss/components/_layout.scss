@@ -7,112 +7,54 @@
 #header-container{
   height:30px;
 }
+
+
 #logo-poli {
-  width: 269px;
-  height: 20px;
-  background: url(../images/logo-poli.svg);
-  float: left;
-  margin:5px 0;
+  height: 60px;
+  background: url(../images/logo-poli-mobile.svg) no-repeat;
+  margin:0;
 }
 
 #logo-meccanica {
-  width: 295px;
-  height: 20px;
-  background: url(../images/logo-meccanica.svg);
-  float: left;
-  margin:5px 0;
+  height: 70px;
+  background: url(../images/logo-meccanica.svg) no-repeat;
+  margin:0;
+  padding-left: 3px;
+}
+
+@include medium-breakpoint {
+  #header-container div{
+    height: 20px
+  }
+  #logo-poli {
+    width: 269px;
+    height: 20px;
+    background: url(../images/logo-poli.svg);
+  }
+  #logo-meccanica {
+    height: 20px;
+    padding-left: 0;
+  }
+}
+
+
+/* Slider home page
+========================================================================*/
+#slider-container{
+  margin-bottom: 3%;
 }
 
 
 /* News home page
  ========================================================================*/
 
-/* News Link styling  */
-.news a {
-  text-decoration: none;
-  &:hover,
-  &:active,
-  &:focus {
-    color: $link-hover-color;
-    text-decoration: none;
-  }
-}
-/* News list date ***********/
-.news-list-date {
-  background: url(../images/calendario.png) no-repeat;
-  width: 43px;
-  height: 44px;
-  text-align: center;
-  display: inline-block;
-  padding-top: 8px;
-  top: 0;
-}
-
-.news-list-date a {
-  font-size: 11px;
-  text-align: center;
-  text-decoration: none;
-  color: #fff;
-  &:hover,
-  &:active,
-  &:focus {
-    color: #fff;
-  }
-}
-
-/* Link to all news */
-.tab-content .csc-header {
-
-  order:2;
-}
-
-.news-list-container  {
-  order:1;
-}
-
-.tab-content .csc-header h1 {
-  background: #028eb2;
-  padding: 10px 20px 10px 0;
-  text-align: right;
-}
-
-.tab-content .csc-header h1 a{
-  color: #ffffff;
-  &:hover,
-  &:active,
-  &:focus {
-    color: #ffffff;
-  }
-  &:after {
-    padding-left: 8px;
-    content: '>';/*blacktriangleright*/
-    font-size: 2rem;
-  }
-}
-
-/* tt_news style overriding ************/
-
-.news-list-container h3 {
-  margin: 0 0 5px 0;
-}
-
-/* tab  style ********************/
+/* News tab navigation  **************************************************/
 
 .news .tab-content {
   display: none;
   padding: 20px 0 0;
   /*box-shadow: inset 0 1px 0 0 $heading-font-color;*/
   border-top: 1px solid $heading-font-color;
-}
-
-.news .list-item:before{
-  content: ""; /* This is necessary for the pseudo element to work. */
-  display: block; /* This will put the pseudo element on its own line. */
-  margin: 0 auto; /* This will center the border. */
-  margin-bottom:10px;
-  width: 90%; /* Change this to whatever width you want. */
-   /* This creates some space between the element and the border. */
-  border-bottom: 1px dotted #bbbbbb; /* This creates the border. Replace black with whatever color you want. */
 }
 
 
@@ -129,9 +71,9 @@ label {
   font-weight: 600;
   font-size: $h2;
   text-align: center;
-  color: #bbb;
+  color: $label-color;
   border: 1px solid transparent;
-  border: 1px solid #bbbbbb;
+  border: 1px solid $label-color;
   border-bottom: 1px solid transparent;
 }
 
@@ -149,7 +91,7 @@ label[for*='4']:before { content: '\f1a9'; }
 */
 
 label:hover {
-  color: #888;
+  color: $label-hover-color;
   cursor: pointer;
 }
 
@@ -185,10 +127,155 @@ input:checked + label {
 }
 */
 
+
+/*News list item **********************************************************/
+/* News Link styling  */
+.news a {
+  text-decoration: none;
+  &:hover,
+  &:active,
+  &:focus {
+    color: $link-hover-color;
+    text-decoration: none;
+  }
+}
+
+.list-item{
+  justify-content: center;
+}
+/* News list date ***********/
+.news-list-date {
+  background: url(../images/calendario.png) no-repeat;
+  width: 43px;
+  height: 44px;
+  flex-basis: 13%;
+  margin-left: 1%;
+  margin-right: 2%;
+}
+
+.news-list-date a {
+  font-size: 10px;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #fff;
+  &:hover,
+  &:active,
+  &:focus {
+    color: #fff;
+  }
+}
+
+.news-list-date span.giorno_evento_home {
+  margin: 10px 0 0 0;
+  width: 25px;
+}
+
+/* News list text************************************************/
+.news-list-text {
+  flex-basis: 80%;
+}
+
+/* Link to all news **********************************************/
+.tab-content .csc-header {
+  order:2;
+}
+
+.news-list-container  {
+  order:1;
+}
+
+.tab-content .csc-header h1 {
+  background: #028eb2;
+  padding: 10px 20px 10px 0;
+  text-align: right;
+}
+
+.tab-content .csc-header h1 a{
+  color: #ffffff;
+  &:hover,
+  &:active,
+  &:focus {
+    color: #ffffff;
+  }
+  &:after {
+    padding-left: 8px;
+    content: '>';/*blacktriangleright*/
+    font-size: 2rem;
+  }
+}
+
+
+@include medium-breakpoint {
+
+  .news .tab-content{
+    border: 1px solid $heading-font-color;
+    padding-bottom:2%;
+    position: relative;
+  }
+  .tab-content .csc-header {
+    position: absolute;
+    right: 4px;
+    top: -60px;
+    order: 1;
+  }
+
+  .tab-content .csc-header h1 {
+    background: transparent;
+    padding: 0;
+    text-align: right;
+  }
+
+  .tab-content .csc-header h1 a{
+    color: $label-hover-color;
+    &:hover,
+    &:active,
+    &:focus {
+      color: $primary-color;
+    }
+    &:after {
+      padding-left: 8px;
+      content: '>';/*blacktriangleright*/
+      font-size: 2rem;
+    }
+  }
+
+  .news-list-container{
+    order: 1;
+  }
+
+  .news-list-container .list-item.medium-25{
+    width: 20%;
+    min-height: 200px;
+    max-height: 200px;
+    margin: 0 4% 0 0;
+    padding: 2% 1% 1%;
+    border-top: 5px solid $primary-color;
+    background-color: $block-background;
+  }
+  .news-list-container .list-item.medium-25:first-child{
+    margin-left:4%;
+  }
+
+
+  .news-list-date {
+    flex-basis: initial;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .news-list-text {
+    flex-basis: 100%;
+  }
+}
+
+
+
 /* Links menu home page
  ========================================================================*/
 .link{
-  margin: 1.5rem 0;
+  margin: 3rem 0;
 }
 
 .csc-menu-10 {
@@ -202,7 +289,6 @@ input:checked + label {
   font-family: $heading-font-family;
   font-size:1.375rem;
   text-transform: uppercase;
-  padding: .15rem;
   border-top: 1px solid transparent;
   border-bottom: 1px dotted #bbb;
   &:after {
@@ -211,7 +297,7 @@ input:checked + label {
     left: -15px;
   }
   &:first-child {
-    border-top: 1px dotted #bbb;
+    border-top: 1px dotted $block-border;
   }
 }
 
@@ -246,19 +332,22 @@ input:checked + label {
 @include x-small-breakpoint {
   //applico il bordo superiore solo ai primi due elementi
   .csc-menu-10 li:nth-child(-n+2) {
-    border-top: 1px dotted #bbb;
+    border-top: 1px dotted $block-border;
   }
 }
 
 @include small-breakpoint {
   .csc-menu-10 li {
-    border-top: 1px dotted #bbb;
+    border-top: 1px dotted $block-border;
   }
 }
 
 
 @include medium-breakpoint {
 
+  .csc-menu-10 li{
+    padding: .15rem;
+  }
   .csc-menu-10 li:after {
       content: '';
   }
@@ -297,15 +386,15 @@ input:checked + label {
   font-family: $heading-font-family;
   font-size:1.375rem;
   border-top: 1px solid transparent;
-  border-bottom: 1px dotted #b4b4b4;
-  background-color: #dddddd;
+  border-bottom: 1px dotted $block-border;
+  background-color: $block-background;
   &:after {
     content: '>';/*blacktriangleright*/
     position: relative;
     left: -15px;
   }
   &:first-child {
-    border-top: 1px dotted #bbb;
+    border-top: 1px dotted $block-border;
   }
 }
 
@@ -324,13 +413,13 @@ input:checked + label {
 
 @include x-small-breakpoint {
   #footer-nav li:nth-child(-n+2) {
-    border-top: 1px dotted #bbb;
+    border-top: 1px dotted $block-border;
   }
 }
 
 @include small-breakpoint {
   #footer-nav li {
-    border-top: 1px dotted #bbb;
+    border-top: 1px dotted $block-border;
   }
 }
 
@@ -339,7 +428,7 @@ input:checked + label {
 #footer-text {
   padding: 15px 0 0 15px;
   background-color: $footer-background;
-  border-bottom: 10px solid #333;
+  border-bottom: 10px solid $block-border;
   color:#fff;
 }
 

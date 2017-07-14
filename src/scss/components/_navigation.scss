@@ -25,6 +25,10 @@ $nav-text-transform: uppercase;
   }
 }
 
+#langMenu a {
+  color:transparent;
+}
+
 #navigation-container{
   background: $nav-background;
 }
@@ -36,8 +40,9 @@ $nav-text-transform: uppercase;
 
 .navigation {
   height: $nav-height;
-  background: $nav-background;
+  background: transparent;
   position: relative;
+  z-index: 9999;
 }
 
 #langMenu{
@@ -184,8 +189,10 @@ nav.main {
      margin:0;
      padding:0;
    }
-  .navigation {
-    background:yellow;
+  #navigation-container{
+    background: transparent;
+    position: relative;
+    top: -40px;
   }
 
   .nav-mobile {
@@ -212,6 +219,10 @@ nav.main {
 
   .nav-dropdown {
     position: static;
+  }
+  #langMenu{
+    top: 0px;
+    right: 80px;
   }
 }
 

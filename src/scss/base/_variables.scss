@@ -28,6 +28,12 @@ $large-bp: $large;
 
 $background: white; 
 $primary-color: #028EB2;
+$block-background: #dddddd;
+$block-border: #bbbbbb;
+$footer-background: #3F4C50;
+$label-color: #bbbbbb;
+$label-hover-color:#888888;
+
 $secondary-color: #5FBA7D; 
 $accent-color: #cdcdcd;
 $alternate-background: #fafafa;
@@ -38,7 +44,7 @@ $link-hover-color: $primary-color;
 $highlight: #ffeea8;
 $error: #D33C40;
 $bq-border: 16px solid #f0f0f0;
-$footer-background: #3F4C50;
+
 
 /* Typography */
 
@@ -81,7 +87,7 @@ $h4: 1.1rem;
 $h5: 1rem;
 
 /* Padding */
-
+//CB ridefinisco padding da 1 a 0.001
 $padding: 0.001rem;
 $margins: 1.5rem;
 $content-padding: 60px 0;
