@@ -1,6 +1,6 @@
-$container: 1200px;
-$breakpoint: 1024px;
-$nav-height: 70px;
+$container: $medium; /*1200*/
+$breakpoint: $medium; /*1024*/
+$nav-height: 50px;/*70*/
 $nav-background: #333333;
 $nav-font-color: #ffffff;
 /*$link-hover-color: #2581DC;*/
@@ -60,7 +60,8 @@ nav.main {
       float: left;
       position: relative;
       border-right: 1px solid #ccc;
-      background: $nav-background;
+      border-top:none;
+      background: $nav-background;/**/
       text-align:left;
       a {
         display: block;
@@ -82,7 +83,8 @@ nav.main {
       }
       ul li {
         min-width: 300px;
-        border-top: 1px solid #ccc;
+        border-top: 1px solid #4D4D4D;
+        border-right: none;
         text-align:left;
         & a {
           padding: 15px;
@@ -95,8 +97,9 @@ nav.main {
         }
         ul li {
           text-align:left;
+          border-right: none;
           & a {
-            padding-left: 10px;
+            padding-left: 30px;/*10*/
             margin-left: 15px;
             &:hover {
               background: $nav-background;
@@ -146,17 +149,17 @@ nav.main {
 
 #nav-toggle {
   position: absolute;
-  left: 18px;
-  top: 22px;
+  left: 12px;/*18*/
+  top: 20px;/*22*/
   cursor: pointer;
-  padding: 10px 35px 16px 0;
+  padding: 8px 25px 14px 0;
   span,
   span:before,
   span:after {
     cursor: pointer;
     border-radius: 1px;
-    height: 3px;
-    width: 35px;
+    height: 3px;/*3*/
+    width: 25px;/*35*/
     background: $nav-font-color;
     position: absolute;
     display: block;
@@ -164,10 +167,10 @@ nav.main {
     transition: all 300ms ease-in-out;
   }
   span:before {
-    top: -10px;
+    top: -8px;/*10*/
   }
   span:after {
-    bottom: -10px;
+    bottom: -8px;/*10*/
   }
   &.active span {
     background-color: transparent;
@@ -193,6 +196,7 @@ nav.main {
     background: transparent;
     position: relative;
     top: -40px;
+    border-bottom: 1px solid #000;
   }
 
   .nav-mobile {
@@ -206,6 +210,7 @@ nav.main {
       display: none;
       li {
         float: none;
+        border-top: 1px solid #999;/**/
         a {
           padding: 15px;
           line-height: 20px;
@@ -237,6 +242,7 @@ nav.main {
 
   nav.main {
     width: 100%;
+    box-shadow: 0 18px 14px -14px rgba(0,0,0,0.6);
   }
 
   nav.main ul li {
