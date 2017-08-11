@@ -9,7 +9,7 @@ $link-hover-color: #028EB2;
 //// Navigation font
 $nav-font-size: 1.375rem;
 $nav-font-color: #ffffff;
-$nav-font-weight: 200;
+$nav-font-weight: 300;
 $nav-font-family: 'Yanone Kaffeesatz','Trebuchet MS', Helvetica, sans-serif;
 $nav-line-height: 1.2;
 $nav-text-transform: uppercase;
@@ -70,6 +70,7 @@ nav.main {
         background: $nav-background;
         font-size:$nav-font-size;
         font-family: $nav-font-family;
+        font-weight: $nav-font-weight;
         /*color: $nav-font-color;*/
         text-decoration: none;
         text-transform: $nav-text-transform;
