@@ -1,13 +1,11 @@
 (function($) { // Begin jQuery
     $(function() { // DOM ready
         // If a link has a dropdown, add sub menu toggle.
-        $('nav ul li a:not(:only-child)').click(function(e) {
+        $(".liv1 a:not(:only-child)").click(function(e) {
             e.preventDefault();
             $(this).siblings('.nav-dropdown').toggle();
             // Close one dropdown when selecting another
             $('.nav-dropdown').not($(this).siblings()).hide();
-            //dovrebe mantenere aperti i genitori degli elementi con classe .act
-            //$('.nav-dropdown .act').parents($(this)).show();
             e.stopPropagation();
         });
         // Clicking away from dropdown will remove the dropdown class
@@ -15,8 +13,9 @@
             $('.nav-dropdown').hide();
         });
         // Toggle open and close nav styles on click
-        $('#nav-toggle').click(function() {
-            $('nav ul').slideToggle();
+        $('#nav-toggle').click(function(k) {
+            k.preventDefault();
+            $('.nav-list').slideToggle();
         });
         // Hamburger to X toggle
         $('#nav-toggle').on('click', function() {
