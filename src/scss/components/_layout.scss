@@ -611,6 +611,24 @@ ul#breadcrumbList .bread-cur{
 }
 
 
+/* Secondi livelli -  spin-off - pagina con 3 colonne
+ ========================================================================*/
+.spin-off .main-content {
+  max-width:1200px;
+  margin: 20px auto;
+  columns: 3 280px;
+  column-gap: 30px;
+}
+
+.spin-off .main-content .csc-default:first-child{
+  column-span: all;
+}
+
+.spin-off .main-content .csc-textpic{
+  display: inline-block;
+  max-width: 280px;
+}
+
 
 /* Footer
  ========================================================================*/
