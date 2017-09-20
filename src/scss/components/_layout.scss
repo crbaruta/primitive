@@ -194,14 +194,17 @@ input:checked +  label[for="tab2"]:before {
   flex-basis: 13%;
   margin-left: 1%;
   margin-right: 2%;
+  padding-left:8px;
 }
 
 #home .news-list-date a {
   font-size: 10px;
   text-decoration: none;
-  display: flex;
+  text-align: center;
+  /*display: flex;
   flex-direction: column;
   justify-content: center;
+  */
   color: #fff;
   &:hover,
   &:active,
@@ -211,14 +214,26 @@ input:checked +  label[for="tab2"]:before {
 }
 
 #home .news-list-date span.giorno_evento_home {
+  display: inline-block;
+  width: 25px;
   margin: 10px 0 0 0;
+}
+#home .news-list-date span.mese_evento_home {
+  display: inline-block;
   width: 25px;
 }
 
 /* News list text************************************************/
 #home .news-list-text {
   flex-basis: 80%;
+
 }
+
+#home .news-list-text span{
+  text-decoration:underline;
+  color:$link-hover-color;
+}
+
 
 /* Link to all news **********************************************/
 #home .tab-content .csc-header {
@@ -317,7 +332,8 @@ input:checked +  label[for="tab2"]:before {
   }
 
   #home .news-list-text {
-    flex-basis: 100%;
+    flex-basis: 95%;
+    font-size: 0.75rem;
   }
 }
 
