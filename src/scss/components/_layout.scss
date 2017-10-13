@@ -506,6 +506,47 @@ ul#breadcrumbList .bread-cur{
 .news-list-container .news-content a{
   text-decoration:none;
 }
+
+
+/* Secondi livelli -  stili per blocchi di testo più immagine - 1col
+si applica nelle seguenti pagine
+dottorato> struttura >internazionalizzazione
+ricerca > progetti europei
+imprese > advisory board
+ ========================================================================*/
+
+.ce-textpic.ce-left.ce-nowrap{
+  min-height:155px;
+  /* background-color:#eee;*/
+  margin-bottom:1rem;
+}
+
+.ce-textpic.ce-left.ce-nowrap .ce-gallery{
+  max-width:270px;
+  height:120px;
+  float:left;
+  margin-right:2rem;
+}
+
+.ce-gallery img{
+  height:120px;
+  width:auto;
+}
+
+.ce-bodytext h2, .ce-bodytext h4{
+  margin-top:0;
+  margin-bottom:0;
+  font-size:1.25rem;
+  color:#404040;
+}
+
+.ce-bodytext h2 a, .ce-bodytext h4 a{
+  color:#404040;
+}
+
+
+
+
 /* Secondi livelli -  Lista laboratori - Menu of subpages of selected pages with image
  ========================================================================*/
 .tile-list .csc-menu-50 {
