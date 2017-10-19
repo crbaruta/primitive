@@ -515,25 +515,49 @@ ricerca > progetti europei
 imprese > advisory board
  ========================================================================*/
 
-.ce-textpic.ce-left.ce-nowrap{
-  min-height:155px;
-  /* background-color:#eee;*/
+.international .ce-textpic.ce-left.ce-nowrap, .progetti-eu .ce-textpic.ce-left.ce-nowrap, .advisory-b .ce-textpic.ce-left.ce-nowrap{
+  margin-top:1rem;
   margin-bottom:1rem;
+  background-color: #ddd;
+ }
+
+.advisory-b .ce-textpic.ce-left.ce-nowrap{
+  min-height:120px;
+  font-size: 0.78rem;
+  padding-right: 0.6rem;
 }
 
-.ce-textpic.ce-left.ce-nowrap .ce-gallery{
-  max-width:270px;
-  height:120px;
+.international .ce-textpic.ce-left.ce-nowrap {
+  min-height:80px;
+}
+.international .ce-textpic.ce-left.ce-nowrap, .progetti-eu .ce-textpic.ce-left.ce-nowrap{
+  min-height:72px;
+}
+
+.international .ce-left.ce-nowrap .ce-gallery, .progetti-eu .ce-left.ce-nowrap .ce-gallery,  .advisory-b .ce-left.ce-nowrap .ce-gallery {
   float:left;
-  margin-right:2rem;
+  margin-right:1rem;
 }
-
-.ce-gallery img{
-  height:120px;
+.advisory-b .ce-gallery img {
   width:auto;
+  max-width: 120px;
+  height: auto;
 }
 
-.ce-bodytext h2, .ce-bodytext h4{
+.progetti-eu .ce-gallery img{
+  width:auto;
+  max-width:162px;
+  height:72px;
+  background-color: #fff;
+}
+
+.international .ce-gallery img{
+  width:auto;
+  max-width:72px;
+  height:auto;
+
+}
+/*.ce-bodytext h2, .ce-bodytext h4{
   margin-top:0;
   margin-bottom:0;
   font-size:1.25rem;
@@ -543,11 +567,155 @@ imprese > advisory board
 .ce-bodytext h2 a, .ce-bodytext h4 a{
   color:#404040;
 }
+*/
+
+.international .ce-bodytext h5, .progetti-eu .ce-bodytext h5 , .advisory-b .ce-bodytext h5,
+.international .ce-bodytext p, .progetti-eu .ce-bodytext p , .advisory-b .ce-bodytext p  {
+  margin: 0;
+}
+.international .ce-bodytext h5, .progetti-eu .ce-bodytext h5 , .advisory-b .ce-bodytext h5{
+  padding-top: 0.2rem;
+}
+
+.advisory-b .ce-bodytext h5{
+  text-transform: uppercase;
+}
+
+.advisory-b .ce-bodytext h5{
+  text-transform: uppercase;
+}
+
+
+.international .ce-bodytext h5{
+  padding-top:25px;
+}
+
+.progetti-eu .ce-left.ce-nowrap .ce-bodytext {
+  clear: both;
+  padding: 0 0 0.4rem 0.4rem;
+}
+.progetti-eu .ce-bodytext h5, .progetti-eu .ce-bodytext p:first-of-type {
+  display: inline;
+}
+
+.progetti-eu .ce-bodytext h5:after{
+  content: " - ";
+}
+
+@include x-small-breakpoint {
+  .progetti-eu .ce-left.ce-nowrap .ce-bodytext {
+    padding-top: 1rem;
+    clear: none;
+
+  }
+}
+@include medium-breakpoint {
+  .international .ce-textpic.ce-left.ce-nowrap {
+    max-width: 65%
+  }
+}
 
 
 
+  /* Secondi livelli - personale 3 colonne e personale 2 colonne
+  questo posizionamento non sfrutta il flex
+  bisogna applicare la classe personale3Colonne come layout di pagina
+  ========================================================================*/
+.personale3Colonne .main-content{
+  padding-top:1rem;
+  width:100%;
+}
+
+.personale3Colonne .persona, .personale2Colonne .persona{
+  float:left;
+  width:100%;
+  margin-right:0.6rem;
+  margin-bottom:.6rem;
+  background-color:#ddd;
+}
+
+
+.personale3Colonne .persona img, .personale2Colonne .persona img {
+  float:left;
+  margin-right:0.6rem;
+  height:auto;
+}
+/*
+.personale3Colonne .persona img {
+  max-width:55px;
+}
+
+.personale2Colonne .persona img {
+  max-width:70px;
+}
+*/
+.persona img {
+  max-width:55px;
+}
+
+.personale3Colonne div:not(.persona), .personale2Colonne div:not(.persona) {
+  clear:both;
+}
+
+.personale3Colonne .persona:nth-child(3n){
+  margin-right:0;
+}
+
+.personale2Colonne .persona:nth-child(2n){
+  margin-right:0;
+}
+
+
+.persona h5{
+  margin:0;
+  padding-top: .275rem;
+  line-height:105%;
+  font-size: 1.25rem;
+  color:#404040;
+}
+
+.persona h5 a{
+
+  text-decoration:none;
+}
+
+.personale2Colonne .persona h5 {
+  padding-top: 15px;
+  padding-bottom: 0.125rem;
+}
+.persona span{
+  display:block;
+  line-height:135%;
+  font-size: 0.78rem;
+}
+
+@include x-small-breakpoint {
+
+}
+
+@include small-breakpoint {
+
+}
+
+@include medium-breakpoint {
+  .personale3Colonne .persona{
+    width:32.2%;
+    min-height:75px;
+  }
+
+  .personale2Colonne .persona{
+    width:48.5%;
+    min-height:75px;
+  }
+}
 
 /* Secondi livelli -  Lista laboratori - Menu of subpages of selected pages with image
+   questo posizionamento sfrutta il flex appoggiandosi alla classe del framework flex-row
+   <nav class="csc-frame tile-list">
+    <ul class="csc-menu csc-menu-50 no-margin no-padding flex-row">
+        <li class="flex-row no-margin">
+        </li>
+    </ul>
  ========================================================================*/
 .tile-list .csc-menu-50 {
   justify-content: start;
@@ -597,6 +765,10 @@ imprese > advisory board
 
 
 /* Secondi livelli -  Lista docenti - Menu of subpages of selected pages with image
+questo posizionamento sfrutta il flex, appoggiandosi alla classe del framework flex-row
+<nav class="csc-frame bar-list">
+    <ul class="csc-menu csc-menu-50 no-margin no-padding flex-row">
+        <li class="flex-row no-margin">
  ========================================================================*/
 
 .bar-list .csc-menu-50 {
@@ -640,12 +812,16 @@ imprese > advisory board
   line-height: 1.4;
   text-transform: capitalize;
   text-decoration: none;
+  height: 100%;
+  padding-top: 18px;
   &:hover,
   &:active,
   &:focus {
     color: $heading-font-color;
   }
 }
+
+
 
 @include x-small-breakpoint {
   .bar-list .csc-menu-50 li {

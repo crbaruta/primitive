@@ -43,12 +43,17 @@ h5 {
 	font-weight: $heading-font-weight;
 	font-family: $heading-font-family;
 	line-height: $heading-line-height;
-	text-transform: uppercase;
+	text-transform: $heading-text-transform;
 	color: $heading-font-color;
 	&:not(:first-child) {
 		margin: 1.5rem 0;
 	}
 }
+
+h5{
+	text-transform: none;
+}
+
 
 // Increased margin on additional headings
 h1:not(:first-child),
