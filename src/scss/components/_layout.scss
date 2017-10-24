@@ -447,6 +447,16 @@ input:checked +  label[for="tab2"]:before {
 /* Secondi livelli - stili generali
  ========================================================================*/
 
+#slider-top-container img{
+  width: 100%;
+  height: auto;
+}
+
+.main-content img {
+  max-width:100%;
+  height:auto;
+}
+
 /* Breadcrumb */
 
 #breadcrumb-container{
@@ -541,20 +551,19 @@ imprese > advisory board
   float:left;
   margin-right:1rem;
 }
-.advisory-b .ce-gallery img {
+.advisory-b .main-content .ce-gallery img {
   width:auto;
   max-width: 120px;
   height: auto;
 }
-
-.progetti-eu .ce-gallery img{
+.progetti-eu .main-content .ce-gallery img {
   width:auto;
   max-width:162px;
   height:72px;
   background-color: #fff;
 }
 
-.international .ce-gallery img{
+.international .main-content  .ce-gallery img{
   width:auto;
   max-width:72px;
   height:auto;
@@ -860,7 +869,7 @@ questo posizionamento sfrutta il flex, appoggiandosi alla classe del framework f
   max-width: 280px;
 }
 //rendo responsive le immagini
-.spin-off img{
+.spin-off .main-content img {
   max-width: 70%;
   height: auto;
 }
