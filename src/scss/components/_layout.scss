@@ -636,14 +636,14 @@ imprese > advisory board
 
   /* Secondi livelli - personale 3 colonne e personale 2 colonne
   questo posizionamento non sfrutta il flex
-  bisogna applicare la classe personale3Colonne come layout di pagina
+  bisogna applicare la classe pTreCol come layout di pagina
   ========================================================================*/
-.personale3Colonne .main-content{
+.pTreCol .main-content{
   padding-top:1rem;
   width:100%;
 }
 
-.personale3Colonne .persona, .personale2Colonne .persona{
+.pTreCol .persona, .pDueCol .persona{
   float:left;
   width:100%;
   margin-right:0.6rem;
@@ -652,17 +652,17 @@ imprese > advisory board
 }
 
 
-.personale3Colonne .persona img, .personale2Colonne .persona img {
+.pTreCol .persona img, .pDueCol .persona img {
   float:left;
   margin-right:0.6rem;
   height:auto;
 }
 /*
-.personale3Colonne .persona img {
+.pTreCol .persona img {
   max-width:55px;
 }
 
-.personale2Colonne .persona img {
+.pDueCol .persona img {
   max-width:70px;
 }
 */
@@ -670,18 +670,17 @@ imprese > advisory board
   max-width:55px;
 }
 
-.personale3Colonne div:not(.persona), .personale2Colonne div:not(.persona) {
+.pTreCol #main-container div:not(.persona), .pDueCol #main-container div:not(.persona) {
   clear:both;
 }
 
-.personale3Colonne .persona:nth-child(3n){
+.pTreCol .persona:nth-child(3n){
   margin-right:0;
 }
 
-.personale2Colonne .persona:nth-child(2n){
+.pDueCol .persona:nth-child(2n){
   margin-right:0;
 }
-
 
 .persona h5{
   margin:0;
@@ -692,11 +691,10 @@ imprese > advisory board
 }
 
 .persona h5 a{
-
   text-decoration:none;
 }
 
-.personale2Colonne .persona h5 {
+.pDueCol .persona h5 {
   padding-top: 15px;
   padding-bottom: 0.125rem;
 }
@@ -715,12 +713,12 @@ imprese > advisory board
 }
 
 @include medium-breakpoint {
-  .personale3Colonne .persona{
+  .pTreCol .persona{
     width:32.2%;
     min-height:75px;
   }
 
-  .personale2Colonne .persona{
+  .pDueCol .persona{
     width:48.5%;
     min-height:75px;
   }
