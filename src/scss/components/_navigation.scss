@@ -260,3 +260,209 @@ nav.main {
 }
 
 
+
+/*########### MENU MIKY #############*/
+#menu{
+  position:relative;
+  display:table;
+  width:100%;
+}
+#menu ul {
+  margin: 0;
+  padding: 0;
+}
+
+#menu .main-menu {
+  display: none;
+  position: relative;
+  z-index: 3000;
+  margin-top:51px;
+  background-color:#333;
+}
+
+#tm:checked + .main-menu {
+  display: block;
+}
+
+#menu input[type="checkbox"],
+#menu ul span.drop-icon {
+  display: none;
+}
+
+#menu li,
+#menu .sub-menu {
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0.05);
+}
+
+#menu li{
+  border-width: 0 0 1px;
+  border-bottom:1px solid #666;
+}
+
+#menu .sub-menu {
+  background-color: #333;
+  border-width: 1px 1px 0;
+}
+
+#menu .sub-menu li:last-child {
+  border-width: 0;
+}
+
+#menu li,
+#menu a {
+  position: relative;
+  display: block;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.125);
+  font-size: 1.375rem;
+  font-family: Yanone Kaffeesatz,Trebuchet MS,Helvetica,sans-serif;
+  font-weight: 300;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+
+#menu #nav-toggle  {
+  background-color: #444;
+  left: initial;
+  right: 0;
+  top: 11px;
+  width: 44px;
+  height: 40px;
+}
+
+#menu #nav-toggle a{
+  width:0px;
+  height:0px;
+  position:absolute;
+  top:0;
+}
+
+#nav-toggle span{
+  left: 9px;
+  top:17px;
+}
+
+#menu a {
+  transition: all 0.125s ease-in-out;
+  -webkit-transition: all 0.125s ease-in-out;
+  padding-left: 1rem;
+}
+
+#menu a:hover {
+  background-color: #09c;
+  color: #fff;
+}
+
+#menu .sub-menu {
+  display: none;
+}
+
+#menu input[type="checkbox"]:checked + .sub-menu {
+  display: block;
+}
+#menu .sub-menu a{
+  border-bottom:1px solid #666;
+  text-transform:lowercase;
+  padding-left:3em;
+}
+#menu .sub-menu a:hover {
+  color: #fff;
+}
+
+#menu label{
+  text-align:left;
+  padding-top: .7em;
+  margin-left: initial;
+}
+
+#menu li label.drop-icon {
+  position: absolute;
+  right: 0;
+  top: 1px;
+  font-size: 2rem;
+  border:none;
+  border-left:1px solid #666;
+}
+
+#menu label.drop-icon,
+#nav-toggle span.drop-icon {
+  text-align: center;
+  padding: 0;
+  width: 50px;
+}
+
+#menu .drop-icon {
+  line-height: 100%;
+}
+
+
+
+@media screen and (min-width: 1000px){
+
+  #menu .main-menu {
+    display: table;
+    height: auto;
+    margin:0 auto;
+  }
+
+  #nav-toggle,
+  #menu label.drop-icon {
+    display: none;
+  }
+
+  #menu ul span.drop-icon {
+    display: block;
+    position: absolute;
+    right: 0.5rem;
+    top: .5rem;
+  }
+  #menu li:first-child{
+    border-left: 1px solid #ccc;
+  }
+
+  #menu a{
+    padding-left:0;
+    padding:.15rem 1.5em;
+  }
+
+  #menu li {
+    float: left;
+    border-width: 0 1px 0 0;
+    border-right: 1px solid #ccc;
+  }
+
+  #menu .sub-menu li {
+    float: none;
+  }
+  #menu .sub-menu a{
+    padding-left:1em;
+  }
+  #menu .sub-menu {
+    border-width: 0;
+    margin: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 12em;
+    z-index: 3000;
+  }
+
+  #menu .sub-menu,
+  #menu input[type="checkbox"]:checked + .sub-menu {
+    display: none;
+  }
+
+  #menu .sub-menu li {
+    border-width: 0 0 1px;
+  }
+
+  #menu .sub-menu .sub-menu {
+    top: 0;
+    left: 100%;
+  }
+
+  #menu li:hover > input[type="checkbox"] + .sub-menu {
+    display: block;
+  }
+}
