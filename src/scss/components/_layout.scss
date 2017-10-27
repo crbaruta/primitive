@@ -447,15 +447,24 @@ input:checked +  label[for="tab2"]:before {
 /* Secondi livelli - stili generali
  ========================================================================*/
 
+/* immagini di copeertina responsive*/
 #slider-top-container img{
   width: 100%;
   height: auto;
 }
 
+/*immagini nel main content responsive*/
+/*il settaggio non si applica alle immagni nelle delle div #gallery*/
 .main-content img {
   max-width:100%;
   height:auto;
 }
+
+.main-content #gallery img {
+  max-width:unset;
+ }
+
+
 
 /* Breadcrumb */
 
@@ -513,10 +522,26 @@ ul#breadcrumbList .bread-cur{
   font-size: 2rem;
 }
 
-
-
 .section-title h3{
   border-bottom: 1px solid $primary-color;
+}
+
+
+/* stile important */
+.important {
+  background-color: #ccc;
+  padding: .3rem;
+  margin-bottom: 0.875rem;
+}
+.important p:last-of-type{
+  margin-bottom:0;
+}
+
+/* stili posizione immagini nel contenuto textmedia*/
+
+/* Posizione: In text, right*/
+.ce-textpic.ce-right.ce-intext img{
+  float:right;
 }
 
 /* Secondi livelli -  News
@@ -786,13 +811,13 @@ questo posizionamento sfrutta il flex, appoggiandosi alla classe del framework f
         <li class="flex-row no-margin">
  ========================================================================*/
 
-.bar-list .csc-menu-50 {
+.bar-list .csc-menu-60 {
   padding:0;
   margin:0;
   list-style: none;
 }
 
-.bar-list .csc-menu-50 li {
+.bar-list .csc-menu-60 li {
   flex-basis: 95%;
   align-items: center;
   font-family: $heading-font-family;
@@ -802,25 +827,25 @@ questo posizionamento sfrutta il flex, appoggiandosi alla classe del framework f
   margin: 0.375rem;
 }
 
-.bar-list .csc-menu-50 li.menu-separator {
+.bar-list .csc-menu-60 li.menu-separator {
   flex-basis: 100%;
   background-color: #fff;
   border-bottom: 1px solid $primary-color;
   margin: 1.175rem 0.75rem  1.175rem 0;
 }
 
-.bar-list .csc-menu-50 li.menu-separator h2{
+.bar-list .csc-menu-60 li.menu-separator h2{
   margin: 0 0 0 0.175rem;
 }
 
-.bar-list .csc-menu-50 span.img{
+.bar-list .csc-menu-60 span.img{
   flex-basis:18%;
 }
-.bar-list .csc-menu-50 span.img img{
+.bar-list .csc-menu-60 span.img img{
   display: block;
 }
 
-.bar-list .csc-menu-50 a.text {
+.bar-list .csc-menu-60 a.text {
   z-index:100;
   flex-basis:75%;
   margin-left: 0.625rem;
@@ -839,19 +864,19 @@ questo posizionamento sfrutta il flex, appoggiandosi alla classe del framework f
 
 
 @include x-small-breakpoint {
-  .bar-list .csc-menu-50 li {
+  .bar-list .csc-menu-60 li {
     flex-basis:45%;
   }
 }
 
 @include small-breakpoint {
-  .bar-list .csc-menu-50 li {
+  .bar-list .csc-menu-60 li {
 
   }
 }
 
 @include medium-breakpoint {
-  .bar-list .csc-menu-50 li {
+  .bar-list .csc-menu-60 li {
     flex-basis:31%;
   }
 }
@@ -875,6 +900,29 @@ questo posizionamento sfrutta il flex, appoggiandosi alla classe del framework f
 .spin-off .main-content img {
   max-width: 70%;
   height: auto;
+}
+
+/* Seconfi livelli - scheda laboratorio
+ ========================================================================*/
+
+.lab div.intro {
+   min-height:100px;
+   margin-bottom: 1rem;
+}
+
+.lab div.intro div{
+    min-height:100px;
+    background-color: #ccc;
+  padding: 0.2rem;
+}
+.lab .medium-66{
+    /*border-right: 15px solid #fff;*/
+margin-right: 2%;
+}
+
+.lab .medium-30{
+  margin:0;
+  padding:0;
 }
 
 
