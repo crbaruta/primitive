@@ -500,7 +500,7 @@ input:checked +  label[for="tab2"]:before {
 
 /* Secondi livelli - stili generali
  ========================================================================*/
-
+/* Stili generici per imamgini **************************************/
 /* immagini di copeertina responsive*/
 #slider-top-container img{
   width: 100%;
@@ -508,15 +508,23 @@ input:checked +  label[for="tab2"]:before {
 }
 
 /*immagini nel main content responsive*/
-/*il settaggio non si applica alle immagni nelle delle div #gallery*/
 .main-content img {
   max-width:100%;
   height:auto;
 }
-
+/*resetto max-width per le immagini contenute nelle div #gallery*/
 .main-content #gallery img {
   max-width:unset;
  }
+
+/* Immagini nei blocchi textmedia - Position and Alignment*/
+/* In text, right*/
+@include xx-small-breakpoint {
+  .ce-textpic.ce-right.ce-intext img{
+    float:right;
+    margin: auto auto 0.6rem 0.875rem;
+  }
+}
 
 
 
@@ -594,12 +602,6 @@ ul#breadcrumbList .bread-cur{
   margin-bottom:0;
 }
 
-/* stili posizione immagini nel contenuto textmedia*/
-
-/* Posizione: In text, right*/
-.ce-textpic.ce-right.ce-intext img{
-  float:right;
-}
 
 /* Secondi livelli -  News
  ========================================================================*/
