@@ -204,6 +204,11 @@ input:checked +  label[for="tab2"]:before {
 }
 */
 
+.news .tab-content.showTab {
+  display: flex;
+  flex-direction: column;
+}
+
 
 /*News list item **********************************************************/
 /* News Link styling  */
@@ -266,11 +271,13 @@ input:checked +  label[for="tab2"]:before {
 #home .news-list-text span{
   text-decoration:underline;
   color:$link-hover-color;
+  display: block;
 }
 
 
 /* Link to all news **********************************************/
-#home .tab-content .csc-header {
+/*#home .tab-content .csc-header*/
+#home .tab-content h2{
   order:2;
 }
 
@@ -278,17 +285,23 @@ input:checked +  label[for="tab2"]:before {
   order:1;
 }
 
-#home .tab-content .csc-header h1,
+/*#home .tab-content .csc-header h1,
 #home .tab-content .csc-header h2,
-#home .tab-content .csc-header h3{
+#home .tab-content .csc-header h3*/
+#home .tab-content h1,
+#home .tab-content h2,
+#home .tab-content h3{
   background: #028eb2;
   padding: 10px 20px 10px 0;
   text-align: right;
 }
 
-#home .tab-content .csc-header h1 a,
+/*#home .tab-content .csc-header h1 a,
 #home .tab-content .csc-header h2 a,
-#home .tab-content .csc-header h3 a{
+#home .tab-content .csc-header h3 a*/
+#home .tab-content h1 a,
+#home .tab-content h2 a,
+#home .tab-content h3 a{
   color: #ffffff;
   &:hover,
   &:active,
@@ -310,24 +323,31 @@ input:checked +  label[for="tab2"]:before {
     padding-bottom:2%;
     position: relative;
   }
-  #home .tab-content .csc-header {
+  /*#home .tab-content .csc-header*/
+  #home .tab-content h2 {
     position: absolute;
     right: 4px;
     top: -60px;
     order: 1;
   }
 
-  #home .tab-content .csc-header h1,
+  /*#home .tab-content .csc-header h1,
   #home .tab-content .csc-header h2,
-  #home .tab-content .csc-header h3{
+  #home .tab-content .csc-header h3*/
+  #home .tab-content h1,
+  #home .tab-content h2,
+  #home .tab-content h3{
     background: transparent;
     padding: 0;
     text-align: right;
   }
 
-  #home .tab-content .csc-header h1 a,
+  /*#home .tab-content .csc-header h1 a,
   #home .tab-content .csc-header h2 a,
-  #home .tab-content .csc-header h3 a{
+  #home .tab-content .csc-header h3 a*/
+  #home .tab-content h1 a,
+  #home .tab-content h2 a,
+  #home .tab-content h3 a{
     color: $label-hover-color;
     &:hover,
     &:active,
