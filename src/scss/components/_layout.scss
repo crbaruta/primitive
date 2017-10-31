@@ -963,10 +963,12 @@ questo posizionamento sfrutta il flex, appoggiandosi alla classe del framework f
 
 /* Seconfi livelli - scheda laboratorio
  ========================================================================*/
-
+.lab h3{
+  margin-bottom: 0.2rem;
+}
 .lab div.intro {
    min-height:100px;
-   margin-bottom: 1rem;
+   margin-bottom: 1.275rem;
 }
 
 .lab div.intro div{
@@ -982,6 +984,50 @@ margin-right: 2%;
 .lab .medium-30{
   margin:0;
   padding:0;
+}
+
+.lab .youtube,
+.lab .img-right{
+  justify-content: center;
+  margin: 2rem auto;
+}
+
+.lab .youtube .iframe,
+.lab .youtube .title{
+  width:300px;
+}
+.lab .youtube .title h5{
+margin: 0.6rem 0 1.6rem 0;
+}
+
+.img-2.slider-pro{
+  margin: 1rem auto 2rem auto;
+}
+
+@include x-small-breakpoint {
+
+  .lab .youtube{
+    justify-content: left;
+    background: #ccc;
+  }
+}
+
+@include medium-breakpoint {
+  .lab .youtube,
+  .lab .img-right{
+    justify-content: left;
+    background: #fff;
+    margin: auto;
+  }
+  .lab .youtube{
+    margin-top:50px;
+  }
+  .lab .youtube iframe{
+    margin:0 auto;
+  }
+  .lab .img-right img{
+    margin-bottom: 0.6rem;
+  }
 }
 
 
