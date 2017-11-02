@@ -517,6 +517,12 @@ input:checked +  label[for="tab2"]:before {
   max-width:unset;
  }
 
+#gallery{
+  border-top: 2px solid $heading-font-color;
+  padding: 1rem 0;
+  border-bottom: 2px solid $heading-font-color;
+}
+
 /* Immagini nei blocchi textmedia - Position and Alignment*/
 /* In text, right*/
 @include xx-small-breakpoint {
@@ -992,7 +998,9 @@ margin-right: 2%;
   margin: 2rem auto;
 }
 
-.lab .youtube .iframe,
+.lab .youtube iframe{
+  max-width:100%;
+}
 .lab .youtube .title{
   width:300px;
 }
@@ -1000,6 +1008,13 @@ margin-right: 2%;
 margin: 0.6rem 0 1.6rem 0;
 }
 
+.lab .youtube .title h5 a{
+  color: $heading-font-color;
+}
+
+.lab .img-right img{
+  height:100%;
+}
 .img-2.slider-pro{
   margin: 1rem auto 2rem auto;
 }
@@ -1010,9 +1025,21 @@ margin: 0.6rem 0 1.6rem 0;
     justify-content: left;
     background: #ccc;
   }
+
+  .lab .img-right {
+    justify-content: left;
+  }
+  .lab .img-right img.x-small-30{
+    margin-bottom: 0.6rem;
+  }
+
+  .lab .youtube .title{
+    width:250px;
+    padding:50px 0.2rem 1rem 0.6rem;
+  }
 }
 
-@include medium-breakpoint {
+@include small-breakpoint {
   .lab .youtube,
   .lab .img-right{
     justify-content: left;
@@ -1022,8 +1049,13 @@ margin: 0.6rem 0 1.6rem 0;
   .lab .youtube{
     margin-top:50px;
   }
+
   .lab .youtube iframe{
     margin:0 auto;
+  }
+  .lab .youtube .title{
+    max-width:100%;
+    padding:0;
   }
   .lab .img-right img{
     margin-bottom: 0.6rem;
