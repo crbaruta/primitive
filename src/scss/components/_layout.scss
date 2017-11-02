@@ -824,11 +824,16 @@ imprese > advisory board
         </li>
     </ul>
  ========================================================================*/
-.tile-list .csc-menu-50 {
+.tile-list {
+  clear: both;
+  margin-top: 2rem;
+}
+
+.tile-list .ce-menu-50 {
   justify-content: start;
 }
 
-.tile-list .csc-menu-50 li {
+.tile-list .ce-menu-50 li {
   align-items: center;
   font-family: $heading-font-family;
   font-size:1.375rem;
@@ -838,7 +843,7 @@ imprese > advisory board
 }
 
 
-.tile-list .csc-menu-50 a.text {
+.tile-list .ce-menu-50 a.text {
   z-index:100;
   display: inline-block;
   text-decoration: none;
@@ -853,19 +858,19 @@ imprese > advisory board
 }
 
 @include x-small-breakpoint {
-  .tile-list .csc-menu-50 li {
+  .tile-list .ce-menu-50 li {
     flex-basis:33%;
   }
 }
 
 @include small-breakpoint {
-  .tile-list .csc-menu-50 li {
+  .tile-list.col-5 .ce-menu-50 li {
     flex-basis:25%;
   }
 }
 
 @include medium-breakpoint {
-  .tile-list .csc-menu-50 li {
+  .tile-list.col-5 .ce-menu-50 li {
     flex-basis:20%;
   }
 }
