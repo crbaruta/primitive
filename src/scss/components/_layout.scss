@@ -249,6 +249,7 @@ input:checked +  label[for="tab2"]:before {
   margin-left: 1%;
   margin-right: 2%;
   padding-left:8px;
+  line-height:0.8rem;
 }
 
 #home .news-list-date a {
@@ -628,11 +629,137 @@ ul#breadcrumbList .bread-cur{
 }
 
 
-/* Secondi livelli -  News
+/* Secondi livelli -  Lista News
  ========================================================================*/
 .news-list-container .news-content a{
   text-decoration:none;
 }
+
+/* vado in conflitto con grid.scss
+  serve nella lista delle news
+
+.column-100 {
+  width: auto;
+}
+*/
+
+
+.news-list-date, .news-single-timedata {
+  float: none;
+  display: block;
+  padding-left:0;
+  color: #028eb2;
+  background:url('/fileadmin/templates/primitive/images/calendario_pag_news.png');
+  background-repeat:no-repeat;
+  line-height:1.5rem;
+  padding-left:2.5rem;
+  font-size:.8rem;
+  margin-bottom:1rem
+}
+
+.news-single-timedata{
+  margin-top:2rem;
+  margin-left:-2.5rem;
+}
+
+.news-single-item{
+  padding-left:2.5rem;
+}
+
+.news-content{
+  margin-bottom:1rem;
+  margin-left:2.6rem;
+  border-bottom:1px dotted #666;
+}
+
+.news-single-backlink{
+  margin-top:2.5rem;
+  padding-left:0;
+}
+
+.news-single-backlink a{
+  font-family: Yanone Kaffeesatz,Trebuchet MS,Helvetica,sans-serif;
+  font-size:1rem;
+  background-color:#028eb2;
+  width:auto;
+  color:#fff;
+  text-decoration:none;
+  padding:.5rem;
+}
+
+.news-single-related dt, .news-single-files dt , .news-single-links dt, .news-single-related dd img, .news-single-files dd img ,
+
+.news-single-links dd img{
+  display:none;
+
+}
+
+.news-single-related dd, .news-single-files dd , .news-single-links dd{
+  margin-left:0;
+}
+
+a[href $='.doc']::before,
+a[href $='.docx']::before{
+  font-family: 'FontAwesome', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  content: "\f15c";
+  display: inline-block;
+  margin-right: 5px;
+  position: relative;
+}
+
+/* Spreadsheet */
+a[href $='.xls']:before,
+a[href $='.xlsx']:before {
+  -webkit-font-smoothing: antialiased;
+  font-family: 'FontAwesome', sans-serif;
+  content: "\f0ce";
+  display: inline-block;
+  position: relative;
+}
+
+/* E-book */
+a[href $='.pdf']:before,
+a[href $='.mobi']:before,
+a[href $='.epub']:before {
+  -webkit-font-smoothing: antialiased;
+  font-family: 'FontAwesome', sans-serif;
+  content: "\f1c1";
+  display: inline-block;
+  margin-right: 5px;
+  position: relative;
+}
+
+/* Audio */
+a[href $='.mp3']:before {
+  -webkit-font-smoothing: antialiased;
+  font-family: 'FontAwesome', sans-serif;
+  content: "\f500";
+  display: inline-block;
+  margin-right: 5px;
+  position: relative;
+}
+
+/* Video */
+a[href $='.mp4']:before,
+a[href $='.mov']:before {
+  -webkit-font-smoothing: antialiased;
+  font-family: 'FontAwesome', sans-serif;
+  content: "\f490";
+  display: inline-block;
+  margin-right: 5px;
+  position: relative;
+}
+
+
+
+
+
+
+
+
+
+
 
 
 /* Secondi livelli -  stili per blocchi di testo più immagine - 1col
