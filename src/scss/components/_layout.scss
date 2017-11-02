@@ -534,6 +534,10 @@ input:checked +  label[for="tab2"]:before {
   }
 }
 
+/*contenimento float per contenuti textmedia con immagini flottate*/
+.ce-textpic.ce-right.ce-intext{
+  overflow: auto;
+}
 
 
 /* Breadcrumb */
