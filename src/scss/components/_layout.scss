@@ -514,47 +514,8 @@ input:checked +  label[for="tab2"]:before {
 }
 
 
-/* Secondi livelli - stili generali
+/* Breadcrumb
  ========================================================================*/
-/* Stili generici per imamgini **************************************/
-/* immagini di copeertina responsive*/
-#slider-top-container img{
-  width: 100%;
-  height: auto;
-}
-
-/*immagini nel main content responsive*/
-.main-content img {
-  max-width:100%;
-  height:auto;
-}
-/*resetto max-width per le immagini contenute nelle div #gallery*/
-.main-content #gallery img {
-  max-width:unset;
- }
-
-#gallery{
-  border-top: 2px solid $heading-font-color;
-  padding: 1rem 0;
-  border-bottom: 2px solid $heading-font-color;
-}
-
-/* Immagini nei blocchi textmedia - Position and Alignment*/
-/* In text, right*/
-@include xx-small-breakpoint {
-  .ce-textpic.ce-right.ce-intext img{
-    float:right;
-    margin: auto auto 0.6rem 0.875rem;
-  }
-}
-
-/*contenimento float per contenuti textmedia con immagini flottate*/
-.ce-textpic.ce-right.ce-intext{
-  overflow: auto;
-}
-
-
-/* Breadcrumb */
 
 #breadcrumb-container{
   background-color:#fff;
@@ -583,6 +544,45 @@ ul#breadcrumbList .bread-cur{
   color:$primary-color;
 }
 
+
+/* Secondi livelli - stili generali
+ ========================================================================*/
+
+/* Stili generici per imamgini **************************************/
+/* immagini di copeertina responsive*/
+#slider-top-container img{
+  width: 100%;
+  height: auto;
+}
+/*immagini nel main content responsive*/
+.main-content img {
+  max-width:100%;
+  height:auto;
+}
+/*resetto max-width per le immagini contenute nelle div #gallery*/
+.main-content #gallery img {
+  max-width:unset;
+ }
+
+/* Immagini nei blocchi textmedia - Position and Alignment*/
+/* In text, right*/
+@include xx-small-breakpoint {
+  .ce-textpic.ce-right.ce-intext img{
+    float:right;
+    margin: auto auto 0.6rem 0.875rem;
+  }
+}
+/*contenimento float per contenuti textmedia con immagini flottate*/
+.ce-textpic.ce-right.ce-intext{
+  overflow: auto;
+}
+
+/*stili per il contenuto gallery*/
+#gallery{
+  border-top: 2px solid $heading-font-color;
+  padding: 1rem 0;
+  border-bottom: 2px solid $heading-font-color;
+}
 
 
 /* Page/Section title */
@@ -620,13 +620,46 @@ ul#breadcrumbList .bread-cur{
 
 /* stile important */
 .important {
-  background-color: #ccc;
+  background-color: $block-background;
   padding: .3rem;
   margin-bottom: 0.875rem;
 }
 .important p:last-of-type{
   margin-bottom:0;
 }
+
+/* stile accordion*/
+
+.accordion h2, .accordion h3{
+  display:block;
+  background: $block-background /*#e9e9e9*/;
+}
+
+.accordion h2:hover , .accordion h3:hover{
+  cursor:pointer;
+}
+
+.accordion h2:before, .accordion h3:before {
+  content: "\f078";
+  float: left;
+  padding-left: 3px;
+  margin-right: 10px;
+  font-family: FontAwesome,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 200;
+  color: #028eb2;
+  font-size: 20px;
+}
+.accordion h2.open:before, .accordion h3.open:before {
+  content: "\f077";
+}
+.accordion div{
+  display:none;
+}
+.accordion div.show, .accordion div.show div{
+  display:block;
+}
+
 
 
 /* Secondi livelli -  Lista News
@@ -697,6 +730,14 @@ ul#breadcrumbList .bread-cur{
 .news-single-related dd, .news-single-files dd , .news-single-links dd{
   margin-left:0;
 }
+
+/* paginazione news*/
+.browseLinksWrap{
+  font-size:.8rem;
+}
+
+
+/*icone file scaricabili **************************************************/
 
 a[href $='.doc']::before,
 a[href $='.docx']::before{
@@ -772,7 +813,7 @@ imprese > advisory board
 .international .ce-textpic.ce-left.ce-nowrap, .progetti-eu .ce-textpic.ce-left.ce-nowrap, .advisory-b .ce-textpic.ce-left.ce-nowrap{
   margin-top:1rem;
   margin-bottom:1rem;
-  background-color: #ddd;
+  background-color: $block-background;
  }
 
 .advisory-b .ce-textpic.ce-left.ce-nowrap{
@@ -884,7 +925,7 @@ imprese > advisory board
   width:100%;
   margin-right:0.6rem;
   margin-bottom:.6rem;
-  background-color:#ddd;
+  background-color: $block-background;
 }
 
 
@@ -1018,6 +1059,20 @@ imprese > advisory board
     flex-basis:20%;
   }
 }
+/*menu test*/
+.tile-list .ce-menu-120 span.img{
+  position:relative;
+}
+.tile-list .ce-menu-120 span.text{
+  position: absolute;
+  left: 0;
+  bottom: 5px;
+  z-index: 99999;
+  color: #fff;
+  padding: 5px;
+  background: rgba(63,76,80,.75);
+  width: 100%;
+}
 
 
 /* Secondi livelli -  Lista docenti - Menu of subpages of selected pages with image
@@ -1027,13 +1082,15 @@ questo posizionamento sfrutta il flex, appoggiandosi alla classe del framework f
         <li class="flex-row no-margin">
  ========================================================================*/
 
-.bar-list .csc-menu-60 {
+/*.bar-list .csc-menu-60 */
+.bar-list ul{
   padding:0;
   margin:0;
   list-style: none;
 }
 
-.bar-list .csc-menu-60 li {
+/*.bar-list .csc-menu-60 li*/
+.bar-list  li{
   flex-basis: 95%;
   align-items: center;
   font-family: $heading-font-family;
@@ -1043,25 +1100,30 @@ questo posizionamento sfrutta il flex, appoggiandosi alla classe del framework f
   margin: 0.375rem;
 }
 
-.bar-list .csc-menu-60 li.menu-separator {
+.bar-list .ce-menu-40 li{
+  min-height: 65px;
+}
+
+.bar-list .ce-menu-60 li.menu-separator{
   flex-basis: 100%;
   background-color: #fff;
   border-bottom: 1px solid $primary-color;
   margin: 1.175rem 0.75rem  1.175rem 0;
 }
 
-.bar-list .csc-menu-60 li.menu-separator h2{
+.bar-list .ce-menu-60 li.menu-separator h2{
   margin: 0 0 0 0.175rem;
 }
 
-.bar-list .csc-menu-60 span.img{
+.bar-list .ce-menu-60 span.img{
   flex-basis:18%;
 }
-.bar-list .csc-menu-60 span.img img{
+.bar-list .ce-menu-60 span.img img{
   display: block;
 }
 
-.bar-list .csc-menu-60 a.text {
+/*.bar-list .csc-menu-60 a.text*/
+.bar-list a.text {
   z-index:100;
   flex-basis:75%;
   margin-left: 0.625rem;
@@ -1078,21 +1140,20 @@ questo posizionamento sfrutta il flex, appoggiandosi alla classe del framework f
 }
 
 
-
 @include x-small-breakpoint {
-  .bar-list .csc-menu-60 li {
+  /*.bar-list .csc-menu-60 li*/
+  .bar-list  li{
     flex-basis:45%;
   }
 }
 
 @include small-breakpoint {
-  .bar-list .csc-menu-60 li {
 
-  }
 }
 
 @include medium-breakpoint {
-  .bar-list .csc-menu-60 li {
+  /*.bar-list .csc-menu-60 li*/
+  .bar-list li{
     flex-basis:31%;
   }
 }
@@ -1130,7 +1191,7 @@ questo posizionamento sfrutta il flex, appoggiandosi alla classe del framework f
 
 .lab div.intro div{
     min-height:100px;
-    background-color: #ccc;
+    background-color: $block-background;
   padding: 0.2rem;
 }
 .lab .medium-66{
@@ -1174,7 +1235,7 @@ margin: 0.6rem 0 1.6rem 0;
 
   .lab .youtube{
     justify-content: left;
-    background: #ccc;
+    background: $block-background;
   }
 
   .lab .img-right {
