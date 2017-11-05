@@ -1042,28 +1042,14 @@ imprese > advisory board
   padding: 0.175rem 0.5rem;
 }
 
-@include x-small-breakpoint {
-  .tile-list .ce-menu-50 li {
-    flex-basis:33%;
-  }
+/*nuovo menu tile - titoli allineati a bordo inferiore img */
+.tile-list .ce-menu-55 li{
+  padding:0.6rem;
 }
-
-@include small-breakpoint {
-  .tile-list.col-5 .ce-menu-50 li {
-    flex-basis:25%;
-  }
-}
-
-@include medium-breakpoint {
-  .tile-list.col-5 .ce-menu-50 li {
-    flex-basis:20%;
-  }
-}
-/*menu test*/
-.tile-list .ce-menu-120 span.img{
+.tile-list .ce-menu-55 span.img{
   position:relative;
 }
-.tile-list .ce-menu-120 span.text{
+.tile-list .ce-menu-55 span.text{
   position: absolute;
   left: 0;
   bottom: 5px;
@@ -1072,7 +1058,30 @@ imprese > advisory board
   padding: 5px;
   background: rgba(63,76,80,.75);
   width: 100%;
+  font-family: $heading-font-family;
+  font-size:1.375rem;
+  text-transform: uppercase;
+  line-height: 110%;
 }
+
+@include x-small-breakpoint {
+  .tile-list .ce-menu-50 li, .tile-list .ce-menu-55 li  {
+    flex-basis:33%;
+  }
+}
+
+@include small-breakpoint {
+  .tile-list.col-5 .ce-menu-50 li, .tile-list.col-5 .ce-menu-55 li  {
+    flex-basis:25%;
+  }
+}
+
+@include medium-breakpoint {
+  .tile-list.col-5 .ce-menu-50 li, .tile-list.col-5 .ce-menu-55 li  {
+    flex-basis:20%;
+  }
+}
+
 
 
 /* Secondi livelli -  Lista docenti - Menu of subpages of selected pages with image
