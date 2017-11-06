@@ -579,9 +579,9 @@ ul#breadcrumbList .bread-cur{
 
 /*stili per il contenuto gallery*/
 #gallery{
-  border-top: 2px solid $heading-font-color;
+  border-top: 3px solid $heading-font-color;
   padding: 1rem 0;
-  border-bottom: 2px solid $heading-font-color;
+  border-bottom: 3px solid $heading-font-color;
 }
 
 
@@ -684,11 +684,24 @@ ul#breadcrumbList .bread-cur{
   color: #028eb2;
   background:url('/fileadmin/templates/primitive/images/calendario_pag_news.png');
   background-repeat:no-repeat;
+  background-position-y: 3px;
   line-height:1.5rem;
   padding-left:2.5rem;
   font-size:.8rem;
   margin-bottom:1rem
 }
+.news-list-date-orario:before {
+  -webkit-font-smoothing: antialiased;
+  font-family: 'FontAwesome', sans-serif;
+  font-size:1.5rem;
+  content: "\f017";
+  display: inline-block;
+  margin-right: 5px;
+  margin-left: 25px;
+  position: relative;
+  top:3px;
+}
+
 
 .news-single-timedata{
   margin-top:2rem;
@@ -1188,7 +1201,7 @@ questo posizionamento sfrutta il flex, appoggiandosi alla classe del framework f
   height: auto;
 }
 
-/* Seconfi livelli - scheda laboratorio
+/* Secondi livelli - scheda laboratorio
  ========================================================================*/
 .lab h3{
   margin-bottom: 0.2rem;
@@ -1212,19 +1225,36 @@ margin-right: 2%;
   margin:0;
   padding:0;
 }
-
+/*
 .lab .youtube,
 .lab .img-right{
   justify-content: center;
   margin: 2rem auto;
 }
+*/
+
+.lab .img-right{
+  padding-top: 1rem;
+}
+
+
+.lab .youtube{
+  border-top: 3px solid $heading-font-color;
+  border-bottom: 3px solid $heading-font-color;
+  padding: 1rem 0 0.2rem 0;
+}
 
 .lab .youtube iframe{
-  max-width:100%;
+  width: 100vw;
+  height: 56vw;
 }
+
+/*
 .lab .youtube .title{
   width:300px;
-}
+}*/
+
+
 .lab .youtube .title h5{
 margin: 0.6rem 0 1.6rem 0;
 }
@@ -1240,8 +1270,9 @@ margin: 0.6rem 0 1.6rem 0;
   margin: 1rem auto 2rem auto;
 }
 
-@include x-small-breakpoint {
 
+@include x-small-breakpoint {
+/*
   .lab .youtube{
     justify-content: left;
     background: $block-background;
@@ -1258,6 +1289,7 @@ margin: 0.6rem 0 1.6rem 0;
     width:250px;
     padding:50px 0.2rem 1rem 0.6rem;
   }
+  */
 }
 
 @include small-breakpoint {
@@ -1269,9 +1301,13 @@ margin: 0.6rem 0 1.6rem 0;
   }
   .lab .youtube{
     margin-top:50px;
+    border: none;
+    padding: 0;
   }
 
   .lab .youtube iframe{
+    width: 100%;
+    height: 100%;
     margin:0 auto;
   }
   .lab .youtube .title{
