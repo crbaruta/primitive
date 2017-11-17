@@ -1061,6 +1061,7 @@ imprese > advisory board
   margin-top: 2rem;
 }
 
+/* old tile list
 .tile-list .ce-menu-50 {
   justify-content: start;
 }
@@ -1088,7 +1089,7 @@ imprese > advisory board
   margin: 0 0.975rem;
   padding: 0.175rem 0.5rem;
 }
-
+*/
 /*nuovo menu tile - titoli allineati a bordo inferiore img */
 .tile-list .ce-menu-55 li{
   padding:0.6rem;
@@ -1248,15 +1249,12 @@ questo posizionamento sfrutta il flex, appoggiandosi alla classe del framework f
 .lab p, .lab ul {
   margin-bottom: .3125rem;
 }
-
-
 .lab div.intro {
-   min-height:100px;
+   min-height:60px;
    margin-bottom: 1.275rem;
 }
-
 .lab div.intro div{
-    min-height:100px;
+    min-height:60px;
     background-color: $block-background;
   padding: 0.2rem;
 }
