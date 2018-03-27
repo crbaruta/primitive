@@ -707,7 +707,6 @@ ul#breadcrumbList .bread-cur{
 .news-list-date, .news-single-timedata {
   float: none;
   display: block;
-  padding-left:0;
   color: #028eb2;
   background:url('/fileadmin/templates/primitive/images/calendario_pag_news.png');
   background-repeat:no-repeat;
@@ -1048,6 +1047,59 @@ imprese > advisory board
   }
 }
 
+/* Secondi livelli - I nostri video
+questa pagina contiene blocchi di contenuto (img+text) personalizzati che devono
+disporsi con layout a pistrella su 3 colonne
+Per posizionare questi elementi sfrutto posizionamento flex,
+che applico al div.main-content andando a selezionare il layout di pagina flex-row
+ ========================================================================*/
+.main-content.flex-row{
+  padding-left: 40px;
+  padding-right: 40px;
+}
+.video-custom{
+  padding: .6rem;
+}
+.video-custom  span.img{
+  position:relative;
+}
+.video-custom span.text{
+  position: absolute;
+  left: 0;
+  bottom: 5px;
+  z-index: 99999;
+  color: #fff;
+  padding: 5px;
+  background: rgba(63,76,80,.75);
+  width: 100%;
+  font-family: $heading-font-family;
+  font-size:1.375rem;
+  text-transform: uppercase;
+  line-height: 110%;
+  min-height: 58px;
+}
+
+.main-content.flex-row div.section-title{
+  flex-basis: 100%;
+}
+
+
+@include x-small-breakpoint {
+  .main-content.flex-row{
+    padding-right: 0;
+  }
+  .main-content.flex-row div{
+    flex-basis: 45%;
+  }
+}
+
+@include small-breakpoint {
+  .main-content.flex-row div{
+    flex-basis: 33%;
+  }
+}
+
+
 /* Secondi livelli -  Lista laboratori - Menu of subpages of selected pages with image
    questo posizionamento sfrutta il flex appoggiandosi alla classe del framework flex-row
    <nav class="csc-frame tile-list">
@@ -1113,6 +1165,8 @@ imprese > advisory board
   min-height: 58px;
 }
 
+
+/* il content element id=1707 è il menu delle sottopagine che si trova nella pagina sezioni id=63*/
 #c1707 span.text, #c2504 span.text{
   min-height: 0;
 }
