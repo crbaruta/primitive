@@ -1419,6 +1419,67 @@ margin: 0.6rem 0 1.6rem 0;
 /* Footer
  ========================================================================*/
 
+/* fontawesome class
+.fa {
+    display: inline-block;
+    font-family:'FontAwesome', sans-serif;
+    font-size: 1.9rem;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}*/
+
+/*Social Icons [inizio]*/
+
+i.fa{
+  margin-right:5px;
+}
+
+.socialIcons{
+  display: block;
+  text-align: center;
+  height:70px;
+  width:100%;
+}
+
+.socialIcons i.fa {
+  border-radius: 6px;
+  width: 45px;
+  height: 45px;
+  padding-top: 6px;
+  text-align: center;
+  background-color: #333;
+  color:#fff;
+}
+.socialIcons i.fa:hover {
+  background-color: #fff;
+  color:#333;
+}
+
+/*instagram*/
+.socialIcons .instagram{
+  background-image: url(../images/social_instagram_white.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+/*youTube*/
+.socialIcons .youtube{
+  background-image: url(../images/social_youtube_white.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+/*LinkedIn*/
+.socialIcons .linkedin{
+  background-image: url(../images/social_linkedin_white.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+/*Social Icons [fine]*/
+
+
 /* Footer nav **********/
 #footer-nav .csc-menu {
   padding:0;
