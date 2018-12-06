@@ -1435,47 +1435,57 @@ i.fa{
   margin-right:5px;
 }
 
+#social-container h2 {
+  color: #fff;
+  display: inline-table;
+  padding-top: 10px;
+  padding-left: 15px;
+}
+
 .socialIcons{
-  display: block;
-  text-align: center;
-  height:70px;
-  width:100%;
+  display: inline-block;
 }
 
 .socialIcons i.fa {
-  border-radius: 6px;
-  width: 45px;
-  height: 45px;
-  padding-top: 6px;
+  display: inline-table;
+  padding: 25px;
   text-align: center;
-  background-color: #333;
+  background-color: transparent;
   color:#fff;
+  top: -10px;
+  position: relative;
 }
 .socialIcons i.fa:hover {
-  background-color: #fff;
+  background-color: transparent;
   color:#333;
 }
 
 /*instagram*/
 .socialIcons .instagram{
-  background-image: url(../images/social_instagram_white.svg);
+  background-image: url(../images/social_instagram_black.svg);
   background-repeat: no-repeat;
   background-position: center center;
 }
 
 /*youTube*/
 .socialIcons .youtube{
-  background-image: url(../images/social_youtube_white.svg);
+  background-image: url(../images/social_youtube_black.svg);
   background-repeat: no-repeat;
   background-position: center center;
 }
 
 /*LinkedIn*/
 .socialIcons .linkedin{
-  background-image: url(../images/social_linkedin_white.svg);
+  background-image: url(../images/social_linkedin_black.svg);
   background-repeat: no-repeat;
   background-position: center center;
 }
+
+#social-container{
+  margin-top:2rem;
+  background-color: $primary-color;
+}
+
 
 /*Social Icons [fine]*/
 
@@ -1559,8 +1569,8 @@ i.fa{
 @include medium-breakpoint {
   /*dal medium-breakpoint in poi cambio l'ordine dei div del footer*/
   #footer-container{
-    margin-top:2rem;
-    background-color: #3F4C50;
+    /*margin-top:2rem;*/
+    background-color: $footer-background;
     border-bottom: 10px solid #333;
   }
   #footer-nav  {
