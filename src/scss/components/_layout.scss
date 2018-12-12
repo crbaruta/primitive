@@ -1438,17 +1438,19 @@ i.fa{
 #social-container h2 {
   color: #fff;
   display: inline-table;
-  padding-top: 10px;
-  padding-left: 15px;
+  padding: 10px 15px 0 15px;
 }
 
+#social-container #newsletter {
+  border-top: 1px dotted #02add9;
+}
 .socialIcons{
   display: inline-block;
 }
 
 .socialIcons i.fa {
   display: inline-table;
-  padding: 25px;
+  padding: 25px 25px 25px 32px;
   text-align: center;
   background-color: transparent;
   color:#fff;
@@ -1486,6 +1488,14 @@ i.fa{
   background-color: $primary-color;
 }
 
+
+
+/* Footer desktop layout **************/
+@include medium-breakpoint {
+  #social-container #newsletter h2 {
+    border-left: 1px solid #fff;
+  }
+}
 
 /*Social Icons [fine]*/
 
@@ -1580,6 +1590,7 @@ i.fa{
   #footer-text  {
     order:1;
     border: none;
+    padding: 15px 0 0 0;
   }
   #footer-nav li {
     min-height: 0;
