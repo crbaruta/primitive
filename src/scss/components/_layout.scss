@@ -1525,17 +1525,21 @@ i.fa{
   }
 }
 
+#social-container #newsletter a,
 #footer-nav a {
   z-index:100;
   display: inline-block;
   flex-basis:85%;
-  margin-left: 1rem;
   text-decoration: none;
   &:hover,
   &:active,
   &:focus {
     color: $heading-font-color;
   }
+}
+
+#footer-nav a {
+  margin-left: 1rem;
 }
 
 @include x-small-breakpoint {
@@ -1566,6 +1570,7 @@ i.fa{
   padding: 5px 10px;
 }
 
+#social-container #newsletter a,
 #footer-text a {
   color: #ffffff;
   &:hover,
@@ -1603,12 +1608,8 @@ i.fa{
     border:none;
     border-left: 1px solid #fff;
   }
-
+  #social-container #newsletter a,
   #footer-nav a {
-    font-family: $font-family;
-    font-size: $body-font-size;
-    text-decoration: underline;
-    padding: 0.375rem 0;
     color: #ffffff;
     &:hover,
     &:active,
@@ -1616,5 +1617,10 @@ i.fa{
       color: #ffffff;
     }
   }
-
+  #footer-nav a {
+    padding: 0.375rem 0;
+    text-decoration: underline;
+    font-family: $font-family;
+    font-size: $body-font-size;
+  }
 }
